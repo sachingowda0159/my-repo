@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Enter the csv file name: "
+echo "Enter the csv file name:  "
 read filename
 
 #Check file exists or not
