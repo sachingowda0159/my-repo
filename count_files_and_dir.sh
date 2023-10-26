@@ -5,9 +5,7 @@ read p
 
 #check the path is correct or not
 if [ -z "$p" ]; then
-	echo "Please provide the directory name" 
-else
-	echo "Directory name is $p"
+	echo "Please provide the directory name"
 fi
 
 #To get the number of files
