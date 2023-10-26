@@ -1,3 +1,2 @@
-# my-first-repo
-Practice Repository
-Test
+# shell_scripts
+shell scripts programms
