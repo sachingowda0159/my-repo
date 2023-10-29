@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Enter the filename: "
+echo "Enter the filename:  "
 read filename
 
 #Check file exists or not
