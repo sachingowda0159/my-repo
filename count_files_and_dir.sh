@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Enter the directory path "
+echo "Enter the directory path"
 read p
 
 #check the path is correct or not
