@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage ('BUILD-WINDOWS') {
+            steps {
+                sh """
+                #!/bin/bash
+                pwd
+                ls -lrt
+                sleep 5
+                """
+            }
+        }
+        
+        stage ('TEST-LINUX') {
+            steps {
+                sh '''
+                #!/bin/bash
+                pwd
+                ls -lrt
+                sleep 5
+                '''
+            }
+        }
+        
+        stage ('DEPLOY') {
+            steps {
+                sh 'sleep 5'
+                
+            }
+            }
+            
+        }
+}
