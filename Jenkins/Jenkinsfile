@@ -1,0 +1,40 @@
+pipeline {
+    agent {
+  label {
+    label 'slave1'
+  }
+}
+
+    
+    stages {
+        stage ('BUILD-WINDOWS') {
+            steps {
+                sh """
+                #!/bin/bash
+                pwd
+                ls -lrt
+                sleep 5
+                """
+            }
+        }
+        
+        stage ('TEST-LINUX') {
+            steps {
+                sh '''
+                #!/bin/bash
+                pwd
+                ls -lrt
+                sleep 5
+                '''
+            }
+        }
+        
+        stage ('DEPLOY') {
+            steps {
+                sh 'sleep 5'
+                
+            }
+            }
+            
+        }
+}
