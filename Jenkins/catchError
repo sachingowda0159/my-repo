@@ -6,8 +6,8 @@ pipeline {
 catchError(buildResult: 'Success', stageResult: 'Failure') {
 sh """
 #!/bin/bash
-psrtatsf
-gssha
+pwd
+ls -lrt
 """
 }
 }
@@ -15,7 +15,7 @@ gssha
 
 stage ('DEPLOY') {
 steps {
-sh ' sleep 5 '
+ echo "Deploying the build" 
 }
 }
   }
