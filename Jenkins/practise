@@ -4,7 +4,7 @@ agent { label 'slave1' }
  parameters {
  string name: 'ENV_NAME',
  description: 'Enter in which environmnet build needs to be deployed',
- defaultVAlue: 'STAGING_ENVIRONMENT'
+ defaultValue: 'STAGING_ENVIRONMENT'
 
  choice choices: ['1.0', '2.0', '3.0'],
  description: 'Please choose the build version',
@@ -21,7 +21,7 @@ stages {
 stage ('TEST') {
 steps {
 script {
-if ("${params.ENV_NAME}" == 'TEST') {
+if ("${params.ENV_NAME}" == 'STAGING_ENVIRONMENT') {
 echo "Deploying the build to Test Environment"
 }
 else if("${params.ENV_NAME}" == 'PROD') {
