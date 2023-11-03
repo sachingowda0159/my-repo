@@ -1,17 +1,13 @@
-pipiline {
+pipeline {
 agent any 
-parameterts {
+parameters {
 string defaultValue: 'TEST',
 description: 'Enter the Environment name to deploy',
 name: 'ENV_NAME'
 
-choice choises: ['1.0', '2.0', '3.0', '4.0', '5.0'],
+choice choices: ['1.0', '2.0', '3.0', '4.0', '5.0'],
 description: 'Enter the build version to deploy',
 name: 'VERSION'
-}
-
-environment {
-ENV_NAME = 'PROD'
 }
 
 stages {
