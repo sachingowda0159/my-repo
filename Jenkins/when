@@ -15,7 +15,7 @@ branch 'main'
 steps { 
 echo "Checkout to main branch"
 
-
+stages {
 stage ('DEPLOY') {
 when {
 expression {
@@ -24,6 +24,7 @@ params.ENV_NAME='TEST'
 }
 steps {
 echo "Deploying to TEST Environment"
+}
 }
 }
 }
