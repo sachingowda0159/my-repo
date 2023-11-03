@@ -22,7 +22,7 @@ stage ('TEST') {
 steps {
 script {
 if ("${params.ENV_NAME}" == 'STAGING_ENVIRONMENT') {
-echo "Deploying the build to Test Environment"
+echo "Deploying the build to STAGING Environment"
 }
 else if("${params.ENV_NAME}" == 'PROD') {
 echo "Deploying the build to Prod Environment"
