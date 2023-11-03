@@ -1,0 +1,20 @@
+Pipeline {
+agent { label 'slave1' }
+
+options {
+timeout{time: 5, unit: 'SECONDS'}
+disableConcurrentBuilds()
+timestamps()
+retry(3)
+}
+
+stages {
+stage ('TEST')
+steps {
+sh """
+pwd
+ls -lrt
+"""
+}
+}
+}
