@@ -8,7 +8,29 @@ name: 'ENV_NAME'
 choice choises: ['1.0', '2.0', '3.0', '4.0', '5.0'],
 description: 'Enter the build version to deploy',
 name: 'VERSION'
+}
 
+environment {
+ENV_NAME = 'PROD'
 }
 
 stages {
+stage ('DEPLOY' ) {
+steps {
+script {
+if ( ${params.ENV_NAME == 'TEST'} ) {
+echo "Deploying to TEST Environment"
+}
+{
+else if ( ${params.ENV_NAME == 'PROD'} )
+echo "Deploying to PROD Environment"
+}
+{
+else
+echo "No such Environment found please enter the correct environment name" 
+}
+}
+}
+}
+}
+}
