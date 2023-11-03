@@ -1,13 +1,13 @@
 pipeline {
 agent any
-
-stages {
-
-stage ('TEST') {
 environment {
 ENV1 = 'Test message'
 ENV2 = 'Hiii Hellooo'
 }
+
+stages {
+
+stage ('TEST') {
 steps {
 echo "${ENV1}"
 }
