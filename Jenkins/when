@@ -19,7 +19,7 @@ steps { echo "Checkout to main branch"
 stage ('DEPLOY') {
 when {
 expression {
-$params.ENV_NAME='TEST'
+params.ENV_NAME='TEST'
 }
 }
 steps {
