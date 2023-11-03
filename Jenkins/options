@@ -2,9 +2,10 @@ pipeline {
 agent { label 'slave1' }
 
 options {
-timeout(time: 1, unit: 'SECONDS')
+timeout(time: 10, unit: 'SECONDS')
 disableConcurrentBuilds()
 timestamps()
+retry(3)
 }
 
 stages {
@@ -14,7 +15,6 @@ steps {
 sh """
 pwd
 ls -lrt
-sleep 15
 """
 }
 }
