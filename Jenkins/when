@@ -7,8 +7,6 @@ description: 'Enter the Environment name',
 defaultValue: 'TEST'
 }
 
-stages {
-stage ('TEST') {
 when {
 branch 'main'
 }
@@ -19,7 +17,7 @@ stages {
 stage ('DEPLOY') {
 when {
 expression {
-params.ENV_NAME='TEST'
+params.ENV_NAME == 'TEST'
 }
 }
 steps {
