@@ -1,4 +1,4 @@
-Pipeline {
+pipeline {
 agent { label 'slave1' }
 
 options {
@@ -9,12 +9,13 @@ retry(3)
 }
 
 stages {
-stage ('TEST')
+stage ('TEST') {
 steps {
 sh """
 pwd
 ls -lrt
 """
+}
 }
 }
 }
