@@ -1,0 +1,21 @@
+pipeline {
+agent any
+
+stages {
+
+stage ('TEST') {
+environment {
+ENV1 = 'Test message'
+ENV2 = 'Hiii Hellooo'
+}
+steps {
+echo "${ENV1}"
+}
+}
+
+stage ('DEPLOY') {
+steps {
+echo "${ENV2}"
+}
+}
+}
