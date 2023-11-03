@@ -6,8 +6,8 @@ pipeline {
 catchError(buildResult: 'Success', stageResult: 'Failure') {
 sh """
 #!/bin/bash
-p6565sxgxgxf$%$%d6732546
-l^^&Gghs48hru4h3lrt
+psrtatsf
+gssha
 """
 }
 }
