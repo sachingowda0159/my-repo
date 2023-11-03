@@ -1,0 +1,29 @@
+pipeline {
+agent { label 'slave1' }
+
+parameters {
+string name: 'ENV_NAME',
+description: 'Enter the Environment name',
+defaultValue: 'TEST'
+}
+
+stages {
+stage ('TEST') {
+when {
+branch 'main'
+}
+steps { echo "Checkout to main branch"
+}
+}
+
+stage ('DEPLOY') {
+when {
+expression {
+$params.ENV_NAME='TEST'
+}
+}
+steps {
+echo "Deploying to TEST Environment"
+}
+}
+}
