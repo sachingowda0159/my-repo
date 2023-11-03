@@ -6,8 +6,8 @@ pipeline {
 catchError(buildResult: 'Success', stageResult: 'Failure') {
 sh """
 #!/bin/bash
-pwd
-ls -lrt
+pwd6732546
+ls48hru4h3lrt
 """
 }
 }
