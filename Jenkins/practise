@@ -18,8 +18,8 @@ disableConcurrentBuilds()
 }
 
 stages {
-
 stage ('TEST') {
+steps {
 script {
 if ("${params.ENV_NAME}" == 'TEST') {
 echo "Deploying the build to Test Environment"
@@ -31,6 +31,7 @@ else  {
 echo "Enter the correct Environment name"
                 }
               }
+}
 }
 }
 }
