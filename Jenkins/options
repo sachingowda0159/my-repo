@@ -2,7 +2,7 @@ pipeline {
 agent { label 'slave1' }
 
 options {
-timeout(time: 2, unit: 'SECONDS')
+timeout(time: 1, unit: 'SECONDS')
 disableConcurrentBuilds()
 timestamps()
 retry(3)
