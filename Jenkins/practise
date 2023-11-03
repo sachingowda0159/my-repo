@@ -1,0 +1,15 @@
+pipeline {
+agent { label 'slave1' }
+
+ parameters {
+ string name: 'ENV_NAME',
+ description: 'Enter in which environmnet build needs to be deployed',
+ defaultVAlue: 'STAGING_ENVIRONMENT'
+
+ choice choices: ['1.0', '2.0', '3.0'],
+ description: 'Please choose the build version',
+ defaultValue: '1.0'
+ }
+
+ options {
+ 
