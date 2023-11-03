@@ -9,6 +9,11 @@ sh """
 pwd
 ls -lrt
 """
+stage ('DEPLOY') {
+steps {
+echo "Deploying the build"
+}
+}
   }
 }
 }
