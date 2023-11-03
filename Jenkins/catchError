@@ -1,0 +1,16 @@
+pipeline {
+  agent any
+  stages {
+    stage ('TEST') {
+      steps {
+catchError(buildResult: 'Success', stageResult: 'Failur') {
+sh """
+#!/bin/bash
+pwd
+ls -lrt
+"""
+  }
+}
+}
+}
+}
