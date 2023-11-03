@@ -7,12 +7,6 @@ description: 'Enter the Environment name',
 defaultValue: 'TEST'
 }
 
-when {
-branch 'main'
-}
-steps { 
-echo "Checkout to main branch"
-
 stages {
 stage ('DEPLOY') {
 when {
@@ -26,5 +20,5 @@ echo "Deploying to TEST Environment"
 }
 }
 }
-}
+
 
