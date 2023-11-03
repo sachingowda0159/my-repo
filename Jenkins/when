@@ -12,9 +12,9 @@ stage ('TEST') {
 when {
 branch 'main'
 }
-steps { echo "Checkout to main branch"
-}
-}
+steps { 
+echo "Checkout to main branch"
+
 
 stage ('DEPLOY') {
 when {
@@ -24,6 +24,9 @@ params.ENV_NAME='TEST'
 }
 steps {
 echo "Deploying to TEST Environment"
+}
+}
+}
 }
 }
 }
