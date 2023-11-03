@@ -27,6 +27,10 @@ echo "Deploying the build to Test Environment"
 else if("${params.ENV_NAME}" == 'PROD') {
 echo "Deploying the build to Prod Environment"
 }
-else "Enter the correct Environment name"
-
- 
+else  {
+echo "Enter the correct Environment name"
+                }
+              }
+}
+}
+}
