@@ -5,16 +5,22 @@ options {
 timeout(time: 1, unit: 'SECONDS')
 disableConcurrentBuilds()
 timestamps()
-retry(3)
 }
 
 stages {
+
 stage ('TEST') {
 steps {
 sh """
 pwd
 ls -lrt
 """
+}
+}
+
+stage ('DEPLOY') {
+steps {
+echo "Test message"
 }
 }
 }
