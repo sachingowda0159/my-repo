@@ -9,6 +9,10 @@ sh """
 pwd
 ls -lrt
 """
+}
+}
+}
+
 stage ('DEPLOY') {
 steps {
 sh ' sleep 5 '
@@ -16,6 +20,4 @@ sh ' sleep 5 '
 }
   }
 }
-}
-}
-}
+
