@@ -17,14 +17,12 @@ script {
 if ( ${params.ENV_NAME == 'TEST'} ) {
 echo "Deploying to TEST Environment"
 }
-{
-else if ( ${params.ENV_NAME == 'PROD'} )
+else if ( ${params.ENV_NAME == 'PROD'} ) {
 echo "Deploying to PROD Environment"
 }
-{
-else
+
+else {
 echo "No such Environment found please enter the correct environment name" 
-}
 }
 }
 }
