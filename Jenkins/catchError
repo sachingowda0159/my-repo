@@ -11,7 +11,9 @@ ls -lrt
 """
 stage ('DEPLOY') {
 steps {
+sh '
 echo "Deploying the build"
+'
 }
 }
   }
