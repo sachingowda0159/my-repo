@@ -1,0 +1,48 @@
+boolean testResult = true
+pipeline {
+agent any
+
+stages {
+stage ('BUILD') {
+steps {
+sh ' sleeep 5 '
+       }
+    }
+
+ stage ('TEST') {
+ steps {
+  script {
+  try {
+  echo "Running the testcases in test environment"
+  } catch (Expression e) {
+  echo "Build failed due to some error in the code"
+  }
+  testResult = false
+      }
+    }
+    
+      stage ('DEPLOY') {
+      steps {
+      script {
+    if (testResult = true) {
+    echo "Build is successfuly deployed"
+    }
+    else {
+    echo " Build is not deployed due to some errors in the test stage"
+    }
+          }
+        }
+
+        stage ('NOTIFICATION') {
+        steps {
+        script {
+        if(testResult = false) {
+        echo "Build is failed due to some error in the test stage "
+        }
+        else {
+        echo "Build is scuccessfully deployed"
+        }
+             }
+          }
+        }  
+      }  
