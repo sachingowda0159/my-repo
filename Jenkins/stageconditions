@@ -14,7 +14,7 @@ sh ' sleeep 5 '
   script {
   try {
   echo "Running the testcases in test environment"
-  } catch (Expression e) {
+  } catch (Exception e) {
   echo "Build failed due to some error in the code"
   testResult == false
            }
