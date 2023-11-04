@@ -17,14 +17,14 @@ sh ' sleeep 5 '
   } catch (Expression e) {
   echo "Build failed due to some error in the code"
   }
-  testResult = false
+  testResult == false
       }
     }
     
       stage ('DEPLOY') {
       steps {
       script {
-    if (testResult = true) {
+    if (testResult == true) {
     echo "Build is successfuly deployed"
     }
     else {
@@ -36,7 +36,7 @@ sh ' sleeep 5 '
         stage ('NOTIFICATION') {
         steps {
         script {
-        if(testResult = false) {
+        if(testResult == false) {
         echo "Build is failed due to some error in the test stage "
         }
         else {
