@@ -40,10 +40,10 @@ sh 'exit1'
         steps {
         script {
         if(testResult == false) {
-        echo "Build is failed due to some error in the test stage "
+        echo "Build is scuccessfully deployed"
         }
         else {
-        echo "Build is scuccessfully deployed"
+        echo "Build is failed due to some error in the test stage"
         }
              }
           }
