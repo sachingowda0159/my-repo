@@ -5,7 +5,7 @@ agent any
 stages {
 stage ('BUILD') {
 steps {
-sh ' sleeep 5 '
+sh ' sleep 5 '
        }
     }
 
