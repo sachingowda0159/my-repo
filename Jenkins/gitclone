@@ -7,10 +7,10 @@ steps {
 git branch: 'main',
 credentialsId: 'github_acc',
 url: 'https://github.com/sachingowda0159/my-first-repo.git'
-sh """
+sh '''
      pwd 
      ls -lrt
-"""
+'''
        }
       }
 stage ('BUILD') {
