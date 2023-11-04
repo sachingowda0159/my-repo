@@ -1,10 +1,6 @@
 pipeline {
     agent any
-  }
-}
-
-    
-    stages {
+  stages {
         stage ('BUILD-WINDOWS') {
             steps {
                 sh """
