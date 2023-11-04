@@ -10,7 +10,7 @@ pipeline {
         stage('BUILD') {
             steps {
                 echo 'STAGE: BUILD'
-            
+            sh ' exit1 '
             }
         }
 
