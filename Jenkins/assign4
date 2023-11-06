@@ -10,7 +10,8 @@ try {
 sh ' exit1 ' 
 } catch (Exception e) {
 echo "Stage A failed"    } 
-
+testResult == true
+testResult == false
      }
    }
 }
