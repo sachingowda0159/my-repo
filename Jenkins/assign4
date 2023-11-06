@@ -5,7 +5,9 @@ agent any
 stages {
 stage ('A') {
 steps {
-sh ' exit1 '
+script {
+sh ' exit1 ' 
+     }
    }
 }
 
