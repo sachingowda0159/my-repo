@@ -3,9 +3,6 @@ agent any
 
 stages {
 stage ('CHECK') {
-when {
-branch 'main'
-}
 steps { 
        checkout([$class: 'GitSCM',
        userRemoteConfigs: [[url: 'https://github.com/sachingowda0159/my-first-repo.git',
@@ -15,6 +12,9 @@ steps {
 }
 
 stage ('BUILD') {
+when {
+branch 'main'
+}
 steps {
 sh ' pwd '
 
