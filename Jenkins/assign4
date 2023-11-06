@@ -7,7 +7,7 @@ stage ('A') {
 steps {
 script { 
 try {
-sh ' pwd ' 
+sh ' exit1 ' 
 } catch (Exception e) {
 echo "Stage A failed"    } 
 
