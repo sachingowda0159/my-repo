@@ -13,6 +13,9 @@ sh 'pwd'
        }
 
 stage ('TEST') {
+when {
+branch 'main' 
+}
 steps {
 sh ' echo "Hii hello" '
 
