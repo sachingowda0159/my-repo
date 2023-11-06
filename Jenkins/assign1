@@ -2,15 +2,18 @@ pipeline {
 agent any
 
 stages {
-stage ('CHECK') {
-when {
-branch 'main'
-}
+stage ('CHECKOUT') {
 steps { 
      checkout scmGit(branches: [[name: '*/main']],
      extensions: [],
      userRemoteConfigs: [[credentialsId: 'github_acc', url: 'https://github.com/sachingowda0159/my-first-repo.git']])
 }
+}
+
+stage ('CHECK') {
+when {
+branch 'main'
+  }
 }
 
 stage ('BUILD') {
