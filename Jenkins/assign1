@@ -1,0 +1,28 @@
+pipeline {
+agent any
+
+stages {
+stage ('CHECK') {
+when {
+branch 'main' 
+}
+steps {
+echo "Checkout to branch 'main' "
+    }
+  }
+
+stage ('BUILD') {
+steps {
+sh 'pwd'
+
+        }
+       }
+
+stage ('TEST') {
+steps {
+sh ' echo "Hii hello' '
+
+      }
+     }
+    }
+   }
