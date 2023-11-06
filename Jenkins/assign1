@@ -14,6 +14,9 @@ stage ('CHECK') {
 when {
 branch 'main'
   }
+steps {
+echo "Hiiiiiiii"
+}
 }
 
 stage ('BUILD') {
