@@ -4,7 +4,9 @@ agent any
 stages {
 stage ('CHECK') {
 steps { 
-     checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github_acc', url: 'https://github.com/sachingowda0159/my-first-repo.git']])
+     checkout scmGit(branches: [[name: '*/main']],
+     extensions: [],
+     userRemoteConfigs: [[credentialsId: 'github_acc', url: 'https://github.com/sachingowda0159/my-first-repo.git']])
 }
 }
 
