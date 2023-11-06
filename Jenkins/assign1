@@ -1,17 +1,10 @@
 pipeline {
 agent any
 
-stages {
-stage ('CHECK') {
+stage ('BUILD') {
 when {
 branch 'master' 
 }
-steps {
-echo "Checkout to branch 'main' "
-    }
-  }
-
-stage ('BUILD') {
 steps {
 sh 'pwd'
 
