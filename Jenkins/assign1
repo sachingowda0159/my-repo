@@ -3,6 +3,9 @@ agent any
 
 stages {
 stage ('CHECK') {
+when {
+branch 'main'
+}
 steps { 
      checkout scmGit(branches: [[name: '*/main']],
      extensions: [],
@@ -11,9 +14,7 @@ steps {
 }
 
 stage ('BUILD') {
-when {
-branch 'main'
-}
+
 steps {
 sh ' pwd '
 
