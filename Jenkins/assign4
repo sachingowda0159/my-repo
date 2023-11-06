@@ -6,7 +6,6 @@ stages {
 stage ('A') {
 steps {
 sh ' pwd '
-testResult == true
    }
 }
 
