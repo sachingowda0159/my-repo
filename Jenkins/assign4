@@ -10,16 +10,20 @@ sh ' pwd '
 }
 
 stage ('B') {
-steps {
-if (testResult == true)
-echo " Executing stage B "
+steps { 
+script {
+if (testResult == true) {
+echo " Executing stage B "    }
+     }
    }
 }
 
 stage ('C') {
 steps {
-if (testResult == false)
-echo "Executing stage c"
+script {
+if (testResult == false) {
+echo "Executing stage c"        }
+          }
        }
       }
      }
