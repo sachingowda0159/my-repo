@@ -9,7 +9,7 @@ script {
 try {
 sh ' exit1 ' 
 } catch (Exception e) {
-echo "Stage A failed"    }
+echo "Stage A failed"    } 
 
      }
    }
@@ -19,7 +19,9 @@ stage ('B') {
 steps { 
 script {
 if (testResult == true) {
-echo " Executing stage B "    }
+echo " Executing stage B "    } 
+else {
+echo "Moving to next stage" }
      }
    }
 }
