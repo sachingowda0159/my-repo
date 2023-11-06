@@ -1,0 +1,27 @@
+boolean testResult = true
+pipeline {
+agent any
+
+stages {
+stage ('A') {
+steps {
+sh ' pwd '
+testResult=true
+   }
+}
+
+stage ('B') {
+steps {
+if(testResult == true)
+echo " Executing stage B "
+   }
+}
+
+stage ('C') {
+steps {
+if(testResult == false)
+echo "Executing stage c"
+       }
+      }
+     }
+    }
