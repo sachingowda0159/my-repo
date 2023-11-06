@@ -3,6 +3,9 @@ agent any
 
 stages {
 stage ('CHECK') {
+when {
+branch 'main'
+}
 steps { 
 git branch: 'main',
             credentialsId: 'github_acc',
@@ -11,9 +14,6 @@ git branch: 'main',
 }
 
 stage ('BUILD') {
-when {
-branch 'main'
-}
 steps {
 sh ' pwd '
 
