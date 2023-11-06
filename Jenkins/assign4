@@ -20,7 +20,7 @@ steps {
 script {
 if (testResult == true) {
 echo " Executing stage B "    } 
-testResult = false
+testResult = true
      }
    }
 }
