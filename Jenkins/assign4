@@ -28,7 +28,7 @@ testResult = true
 stage ('C') {
 steps {
 script {
-if (testResult == false) {
+if (testResult == true) {
 echo "Executing stage c"        }
           }
        }
