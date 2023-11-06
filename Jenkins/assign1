@@ -7,7 +7,7 @@ when {
 branch 'main' 
 }
 steps {
-sh 'pwd'
+sh ' pwd '
 
         }
        }
