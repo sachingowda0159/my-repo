@@ -20,7 +20,7 @@ sh 'pwd'
 
 stage ('TEST') {
 steps {
-sh ' echo "Hii hello' '
+sh ' echo "Hii hello" '
 
       }
      }
