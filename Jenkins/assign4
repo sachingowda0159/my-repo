@@ -6,7 +6,7 @@ stages {
 stage ('A') {
 steps {
 script {
-sh ' pwd ' 
+sh ' exit1 ' 
 testResult == false
      }
    }
