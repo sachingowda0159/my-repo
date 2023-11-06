@@ -2,10 +2,16 @@ pipeline {
 agent any
 
 stages {
-stage ('BUILD') {
+stage ('CHECK') {
 when {
-branch 'main' 
+branch 'main'
 }
+steps {
+echo "Checkout to main branch"
+}
+}
+
+stage ('BUILD') {
 steps {
 sh ' pwd '
 
@@ -13,9 +19,6 @@ sh ' pwd '
        }
 
 stage ('TEST') {
-when {
-branch 'main' 
-}
 steps {
 sh ' echo "Hii hello" '
 
