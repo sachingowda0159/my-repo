@@ -4,7 +4,7 @@ agent any
 stages {
 stage ('CHECK') {
 when {
-branch 'main' 
+branch 'master' 
 }
 steps {
 echo "Checkout to branch 'main' "
