@@ -18,7 +18,7 @@ echo "Stage A failed"    }
 stage ('B') {
 steps { 
 script {
-if (testResult == false) {
+if (testResult == true) {
 echo " Executing stage B "    }
      }
    }
@@ -27,7 +27,7 @@ echo " Executing stage B "    }
 stage ('C') {
 steps {
 script {
-if (testResult == true) {
+if (testResult == false) {
 echo "Executing stage c"        }
           }
        }
