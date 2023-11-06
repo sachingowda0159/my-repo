@@ -10,7 +10,7 @@ try {
 sh ' pwd ' 
 } catch (Exception e) {
 echo "Stage A failed"    }
-testResult == false
+
      }
    }
 }
