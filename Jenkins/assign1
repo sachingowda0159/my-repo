@@ -7,9 +7,10 @@ when {
 branch 'main'
 }
 steps { 
-git branch: 'main',
-            credentialsId: 'github_acc',
-            url: 'https://github.com/sachingowda0159/my-first-repo.git'
+       checkout([$class: 'GitSCM',
+       userRemoteConfigs: [[url: 'https://github.com/sachingowda0159/my-first-repo.git',
+       branches: [[name: '*/main']],
+       credentialsId: 'github_acc']]])
 }
 }
 
