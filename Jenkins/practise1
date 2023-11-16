@@ -11,4 +11,16 @@ parameters {
   name: 'Environment'
 }
 
+environment {
+TEST1=test message
+ENV2=hiii 
+}
+
+stages {
+stage(TEST)
+steps {
+sh ' echo $TEST1 '
+         } 
+        }
+     }
 }
