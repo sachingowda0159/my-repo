@@ -30,7 +30,7 @@ steps {
 script {
 try {
 sh 'exit1 '
-catch (Exception e) }
+} catch (Exception e) 
 if(testResult == true) {
 echo "Build is successfully deployed" }
 else
