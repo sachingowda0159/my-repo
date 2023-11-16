@@ -33,6 +33,7 @@ echo "Build is successfully deployed" }
 else
 { 
 echo "Build failed due to some errors" }
+sh 'exit1'
         }
        }
      }
