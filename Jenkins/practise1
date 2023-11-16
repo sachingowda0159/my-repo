@@ -47,9 +47,6 @@ echo " build failed in prod env " }
        } 
       }
      }
-    
-
-
 post {
 always {
 echo "Hiiiiiiii"
