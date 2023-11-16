@@ -12,14 +12,14 @@ parameters {
 }
 
 environment {
-TEST1=test message
-ENV2=hiii 
+TEST1 = 'test message'
+ENV2 = 'hiii' 
 }
 
 stages {
 stage(TEST)
 steps {
-sh ' echo $TEST1 '
+echo "${TEST1}"
          } 
         }
      }
