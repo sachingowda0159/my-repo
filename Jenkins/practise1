@@ -31,11 +31,13 @@ script {
 try {
 sh 'exit1 '
 } catch (Exception e) 
-if(testResult == true) {
+ {
 echo "Build is successfully deployed" }
 else
 { 
 echo "Build failed due to some errors" }
+testResult = false
+testResult = true
 
         }
        }
