@@ -47,7 +47,7 @@ else {
 echo " build failed in prod env " }
        } 
       }
-     }
+     
 post {
 always {
 echo "Hiiiiiiii"
@@ -60,5 +60,6 @@ failure {
 echo "Script is failure"
  }
   }
+}
 }
 }
