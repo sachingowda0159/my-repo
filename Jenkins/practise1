@@ -1,4 +1,4 @@
-boolean testResult == true
+boolean testResult = true
 pipeline {
 agent any
 
@@ -19,13 +19,13 @@ ENV2 = 'hiii'
 }
 
 stages {
-stage(TEST) {
+stage('TEST') {
 steps {
 echo "${TEST1}"
          } 
         }
 
-stage(TEST) {
+stage('STAGING') {
 steps {
 script {
 if(testResult == true) {
@@ -37,7 +37,7 @@ echo "Build failed due to some errors" }
        }
      }
 
-stage(PROD) {
+stage('PROD') {
 steps {
 script {
 if(testResult == false) {
