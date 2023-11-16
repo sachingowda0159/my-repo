@@ -27,6 +27,7 @@ echo "${TEST1}"
 post {
 always {
 echo "Hiiiiiiii"
+cleanWs()
 }
  success {
 echo "Script is success"
