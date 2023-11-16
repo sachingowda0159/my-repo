@@ -34,7 +34,6 @@ sh 'exit1 '
  {
 echo "Build is successfully deployed" }
 testResult = false
-testResult = true
 
         }
        }
