@@ -1,3 +1,4 @@
+boolean testResult == true
 pipeline {
 agent any
 
@@ -23,7 +24,32 @@ steps {
 echo "${TEST1}"
          } 
         }
+
+stage(TEST) {
+steps {
+script {
+if(testResult == true) {
+echo "Build is successfully deployed" }
+else
+{ 
+echo "Build failed due to some errors" }
+        }
+       }
      }
+
+stage(PROD) {
+steps {
+script {
+if(testResult == false) {
+echo "build is deploed is PROD env " }
+else {
+echo " build failed in prod env " }
+       } 
+      }
+     }
+    
+
+
 post {
 always {
 echo "Hiiiiiiii"
@@ -36,4 +62,5 @@ failure {
 echo "Script is failure"
  }
   }
+
 }
