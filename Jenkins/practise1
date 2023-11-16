@@ -17,9 +17,10 @@ ENV2 = 'hiii'
 }
 
 stages {
-stage(TEST)
+stage(TEST) {
 steps {
 echo "${TEST1}"
          } 
         }
      }
+}
