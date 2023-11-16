@@ -23,4 +23,15 @@ echo "${TEST1}"
          } 
         }
      }
+post {
+always {
+echo "Hiiiiiiii"
+}
+ success {
+echo "Script is success"
+  }
+failure {
+echo "Script is failure"
+ }
+  }
 }
