@@ -62,5 +62,4 @@ failure {
 echo "Script is failure"
  }
   }
-
 }
