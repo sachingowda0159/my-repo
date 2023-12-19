@@ -6,11 +6,11 @@ environment {
 }
 
 stages {
+
+stage ('BUILD') {
 when {
   environment name: 'ENVIRONMENT', value: 'QA'
 }
-
-stage ('BUILD') {
 steps {
 sh ' echo hii '
    }
