@@ -1,0 +1,19 @@
+pipeline {
+agent any
+
+environment {
+  ENVIRONMENT = "QA, STAGING, PROD"
+}
+
+stages {
+when {
+  environment name: 'ENVIRONMENT', value: 'QA'
+}
+
+stage ('BUILD') {
+steps {
+sh ' echo hii '
+   }
+  }
+}
+}
