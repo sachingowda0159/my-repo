@@ -6,14 +6,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: ip-app
+      app: ip-appp
   template:
     metadata:
       labels:
-        app: ip-app
+        app: ip-appp
     spec:
       containers:
-      - name: ipapp
+      - name: ipappp
         image: harshajain/ip_app:latest
         ports:
         - containerPort: 8080
