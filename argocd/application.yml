@@ -4,9 +4,9 @@ metadata:
   name: go-app-argo-config
   namespace: argocd
 spec:
-  project: itd-k8s
+  project: sachin-k8
   source:
-    repoURL: https://github.com/jaintpharsha/Devops-ITD-Aug-2023.git
+    repoURL: https://github.com/sachingowda0159/my-repo.git
     targetRevision: main
     path: Kubernetes/argocd/kube_configs
   destination:
