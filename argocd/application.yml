@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/sachingowda0159/my-repo.git
     targetRevision: main
-    path: Kubernetes/argocd/kube_configs
+    path: argocd/kube_configs
   destination:
     server: https://13.201.8.19:6443
     namespace: default
