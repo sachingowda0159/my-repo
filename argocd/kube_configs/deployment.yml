@@ -13,14 +13,8 @@ spec:
         app: ip-appp
     spec:
       containers:
-      - name: ipappp
-        image: alpine:latest
+      - name: nginx
+        image: nginx:latest
         ports:
-        - containerPort: 8080
-        volumeMounts:
-        - name: pvc-vol1
-          mountPath: /app/pvc-volume
-      volumes:
-      - name: pvc-vol1
-        persistentVolumeClaim:
-          claimName: my-pvc1
+        - containerPort: 80
+        
