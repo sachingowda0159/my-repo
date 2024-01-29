@@ -10,7 +10,7 @@ spec:
     targetRevision: main
     path: argocd/kube_configs
   destination:
-    server: https://3.108.191.0:6443
+    server: https://13.232.196.107:6443
     namespace: default
   syncPolicy:
     syncOptions:
