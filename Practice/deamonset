@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deamonset
+metadata:
+  name: java-1
+spec:
+  selectors:
+    matchLabels: 
+      app: my-java
+  template: 
+    metadata
+      labels:
+        app: my-java
+    spec:
+    - name: java1
+      image: java:latest
+      ports:
+      - containerPort: 8080
+  
